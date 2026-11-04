@@ -31,5 +31,5 @@
     <p class="empty">Nothing published yet.</p>
   {{/foreach}}
   </div>
-  {{#if pagination}}{{#pagination}}{{#if prev}}{{#if next}}<nav class="pagination"><a href="{{page_url prev}}">Newer</a><a href="{{page_url next}}">Older</a></nav>{{else}}<nav class="pagination"><a href="{{page_url prev}}">Newer</a></nav>{{/if}}{{else}}{{#if next}}<nav class="pagination"><span></span><a href="{{page_url next}}">Older</a></nav>{{/if}}{{/if}}{{/pagination}}{{/if}}
+  {{#if pagination}}{{#with pagination}}{{#if prev}}{{#if next}}<nav class="pagination"><a href="{{page_url prev}}">Newer</a><a href="{{page_url next}}">Older</a></nav>{{else}}<nav class="pagination"><a href="{{page_url prev}}">Newer</a></nav>{{/if}}{{else}}{{#if next}}<nav class="pagination"><span></span><a href="{{page_url next}}">Older</a></nav>{{/if}}{{/if}}{{/with}}{{/if}}
 </section>
