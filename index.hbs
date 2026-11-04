@@ -1,0 +1,35 @@
+{{!< default}}
+{{#is "home"}}
+  <header class="masthead">
+    <div>
+      <h1>Center<span class="num">17</span></h1>
+      <p class="tagline">{{@site.description}}</p>
+    </div>
+    <dl class="now">
+      <dt>Projects</dt><dd><a href="https://projects.center17.org/">projects.center17.org</a></dd>
+      <dt>For students</dt><dd><a href="{{@site.url}}/blogroll/">Blogroll</a></dd>
+      <dt>Follow</dt><dd><a href="{{@site.url}}/rss/">RSS</a> &middot; <span class="handle">@index@center17.org</span></dd>
+    </dl>
+  </header>
+{{else}}
+  <header class="masthead small">
+    <h1 class="context">{{#is "tag"}}{{#tag}}{{name}}{{/tag}}{{/is}}{{#is "author"}}{{#author}}{{name}}{{/author}}{{/is}}{{#is "paged"}}Page {{pagination.page}}{{/is}}</h1>
+  </header>
+{{/is}}
+
+<section class="section">
+  <span class="section-label">{{#is "home"}}Writing{{else}}Posts{{/is}}</span>
+  <div class="section-rule"></div>
+  <div class="category">
+  {{#foreach posts}}
+    <a class="row" href="{{url}}">
+      <time class="row-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="YYYY-MM-DD"}}</time>
+      <span class="row-body"><span class="row-title">{{title}}</span>{{#if custom_excerpt}}<span class="row-desc">{{custom_excerpt}}</span>{{else}}<span class="row-desc">{{excerpt words="28"}}</span>{{/if}}</span>
+      <span class="row-meta">{{reading_time minute="1 min" minutes="% min"}}</span>
+    </a>
+  {{else}}
+    <p class="empty">Nothing published yet.</p>
+  {{/foreach}}
+  </div>
+  {{pagination}}
+</section>

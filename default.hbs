@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{meta_title}}</title>
+  <link rel="stylesheet" href="{{asset "css/screen.css"}}">
+  {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+
+<nav class="topnav"><div class="inner">
+  <a class="brand" href="{{@site.url}}">Center<b>17</b></a>
+  {{navigation}}
+  <a class="ext" href="https://projects.center17.org/">Projects</a>
+</div></nav>
+
+<div class="page">
+{{{body}}}
+
+  <footer class="site-footer">
+    <span>&copy; 2017&ndash;{{date format="YYYY"}} {{@site.title}}</span>
+    <nav>
+      {{navigation type="secondary"}}
+      <a href="{{@site.url}}/rss/">RSS</a>
+    </nav>
+  </footer>
+</div>
+
+{{ghost_foot}}
+</body>
+</html>

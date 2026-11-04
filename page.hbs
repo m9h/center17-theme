@@ -1,0 +1,12 @@
+{{!< default}}
+{{#post}}
+<article class="{{post_class}} article">
+  <header class="article-head">
+    <h1 class="article-title">{{title}}</h1>
+    {{#if custom_excerpt}}<p class="article-excerpt">{{custom_excerpt}}</p>{{/if}}
+  </header>
+  <section class="content">
+    {{content}}
+  </section>
+</article>
+{{/post}}
