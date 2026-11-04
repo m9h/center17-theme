@@ -13,7 +13,7 @@
   </header>
 {{else}}
   <header class="masthead small">
-    <h1 class="context">{{#is "tag"}}{{#tag}}{{name}}{{/tag}}{{/is}}{{#is "author"}}{{#author}}{{name}}{{/author}}{{/is}}{{#is "paged"}}Page {{pagination.page}}{{/is}}</h1>
+    <h1 class="context">{{#is "tag"}}{{#tag}}{{name}}{{/tag}}{{/is}}{{#is "author"}}{{#primary_author}}{{name}}{{/primary_author}}{{/is}}{{#is "paged"}}Page {{pagination.page}}{{/is}}</h1>
   </header>
 {{/is}}
 
